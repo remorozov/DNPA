@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ДПНА</title>
+    <link rel="shortcut icon" href="Pic/logo.ico" type="image/jpg">
     <link rel="stylesheet" href="Main.css" />
     <link
       rel="stylesheet"
@@ -136,7 +137,7 @@
 
                 var position = {
                   getMin: 0,
-                  getMax: _items.length - 1,
+                  getMax: _items.length,
                 };
 
                 var _transformItem = function (direction) {
@@ -159,14 +160,15 @@
                         "slider__control_show"
                       ) &&
                       _positionLeftItem + _wrapperWidth / _itemWidth >=
-                        position.getMax
+                        position.getMax 
                     ) {
-                      _sliderControlRight.classList.remove(
-                        "slider__control_show"
-                      );
-                    }
-                    _positionLeftItem++;
+                      _positionLeftItem = 0;
+                      _transform = 0;
+                    } else{
+                      _positionLeftItem++;
                     _transform -= _step;
+                    }
+                    
                   }
                   if (direction === "left") {
                     if (_positionLeftItem <= position.getMin) {
@@ -180,17 +182,18 @@
                       _sliderControlRight.classList.add("slider__control_show");
                     }
                     if (
-                      _sliderControlLeft.classList.contains(
+                      _sliderControlRight.classList.contains(
                         "slider__control_show"
                       ) &&
-                      _positionLeftItem - 1 <= position.getMin
+                      _positionLeftItem + _wrapperWidth / _itemWidth <=
+                        position.getMax 
                     ) {
-                      _sliderControlLeft.classList.remove(
-                        "slider__control_show"
-                      );
-                    }
-                    _positionLeftItem--;
+                      _positionLeftItem = position.getMax;
+                    _transform = position.getMax ;
+                    } else{
+                      _positionLeftItem--;
                     _transform += _step;
+                    }
                   }
                   _sliderWrapper.style.transform =
                     "translateX(" + _transform + "%)";
@@ -300,16 +303,71 @@
         </div>
       </div>
       <div class="section s5">
-        <div class="example"></div>
+        <div class="example">
+          <div class="product_title">Примеры современной и креативной упаковки</div>
+          <div class="slider">
+            <div class="slider__wrapper">
+              <div class="slider__item">
+                <div
+                  style="height: 100%; width: 100%; background: orange;"
+                ></div>
+              </div>
+              <div class="slider__item">
+                <div
+                  style="height: 100%; width: 100%; background: green;"
+                ></div>
+              </div>
+              <div class="slider__item">
+                <div
+                  style="height: 100%; width: 100%; background: violet;"
+                ></div>
+              </div>
+              <div class="slider__item">
+                <div
+                  style="height: 100%; width: 100%; background: coral;"
+                ></div>
+              </div>
+            </div>
+            <a
+              class="slider__control slider__control_left"
+              href="#"
+              role="button"
+            ></a>
+            <a
+              class="slider__control slider__control_right slider__control_show"
+              href="#"
+              role="button"
+            ></a>
+          </div>
+          <div class="example_package">
+            <div class="example_package_title">Cрочно нужна крутая упаковка</div>
+            <div class="example_package_contact">
+              <div class="example_package_number">Телефон</div>
+              <div class="example_package_number">Имя</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="section s6">
-        <div class="clients"></div>
+        <div class="clients">
+          <div class="product_title">Для наших клиентов, сделанная нами упаковка — не статья расхода, а статья дохода!</div>
+          <div class="client_wrapper">
+            
+          </div>
+        </div>
       </div>
       <div class="section s7">
-        <div class="houston"></div>
+        <div class="houston">
+          <div class="product_title">Хьюстон, у нас проблема!</div>
+
+        </div>
       </div>
       <div class="section s8">
-        <div class="contacts"></div>
+        <div class="contacts">
+          <div class="header_title">
+            Контакты
+          </div>
+        </div>
       </div>
     </div>
 
