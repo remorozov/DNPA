@@ -12,43 +12,7 @@
       crossorigin="anonymous"
     />
   </head>
-
   <body>
-    <script>
-      var t;
-      function up() {
-        var top = Math.max(
-          document.body.scrollTop,
-          document.documentElement.scrollTop
-        );
-        if (top > 0) {
-          window.scrollBy(0, -200);
-          t = setTimeout("up()", 20);
-        } else clearTimeout(t);
-        return false;
-      }
-    </script>
-
-    <div>
-      <ul class="menu-main">
-        <li>
-          <a onclick="return up()"
-            ><div class="menu-main_logo">
-              <img
-                src="Pic/logo.jpg"
-                style="width: 50x; height: 50px; cursor: pointer;"
-              /></div
-          ></a>
-        </li>
-
-        <li><a href="Services/Services.html">Продукция</a></li>
-        <li><a href="">Услуги</a></li>
-        <li><a href="">Примеры</a></li>
-        <li><a href="">Наши клиенты</a></li>
-        <li><a href="">Вопросы</a></li>
-        <li><a href="">Контакты</a></li>
-      </ul>
-    </div>
     <div id="fullpage">
       <div class="section s1">
         <div class="header_text">
@@ -249,83 +213,6 @@
             var slider = multiItemSlider(".slider");
           </script>
         </div>
-      </div>
-      <div class="section s3">
-        <div class="product">
-          <div class="product_title">Мы сделаем для вас</div>
-          <div class="product_wrapper">
-            <div class="product_row">
-              <div class="product_item">
-                <div class="product_image"></div>
-                <div class="product_name"></div>
-              </div>
-              <div class="product_item">
-                <div class="product_image"></div>
-                <div class="product_name"></div>
-              </div>
-            </div>
-            <div class="product_row">
-              <div class="product_item">
-                <div class="product_name"></div>
-                <div class="product_image"></div>
-              </div>
-              <div class="product_item">
-                <div class="product_name"></div>
-                <div class="product_image"></div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="">
-              Женщины охотно подчиняются моде, потому что знают: чтобы
-              содержимое не приедалось, нужно почаще менять упаковку
-            </div>
-            <div class="">(с) Ноуел Ковард</div>
-          </div>
-        </div>
-      </div>
-      <div class="section s4">
-        <div class="services">
-          <div class="services_item">
-            <div class="sevices_image"></div>
-            <div class="sevices_text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
-              finibus sem. Vivamus feugiat posuere venenatis.Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Duis in finibus sem.
-              Vivamus feugiat posuere venenatis.
-            </div>
-          </div>
-          <div class="services_item">
-            <div class="sevices_text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
-              finibus sem. Vivamus feugiat posuere venenatis.Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Duis in finibus sem.
-              Vivamus feugiat posuere venenatis.
-            </div>
-            <div class="sevices_image"></div>
-          </div>
-          <div class="services_item">
-            <div class="sevices_image"></div>
-            <div class="sevices_text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in
-              finibus sem. Vivamus feugiat posuere venenatis.Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Duis in finibus sem.
-              Vivamus feugiat posuere venenatis.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section s5">
-        <div class="example"></div>
-      </div>
-      <div class="section s6">
-        <div class="clients"></div>
-      </div>
-      <div class="section s7">
-        <div class="houston"></div>
-      </div>
-      <div class="section s8">
-        <div class="contacts"></div>
       </div>
     </div>
 
