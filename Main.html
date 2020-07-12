@@ -18,7 +18,7 @@
     <div>
       <ul class="menu-main">
         <li>
-          <a onclick="return up()"
+          <a href="#firstPage"
             ><div class="menu-main_logo">
               <img
                 src="Pic/logo.jpg"
@@ -27,16 +27,16 @@
           ></a>
         </li>
 
-        <li><a href="Services/Services.html">Продукция</a></li>
-        <li><a href="">Услуги</a></li>
-        <li><a href="">Примеры</a></li>
-        <li><a href="">Наши клиенты</a></li>
-        <li><a href="">Вопросы</a></li>
-        <li><a href="">Контакты</a></li>
+        <li><a href="#secondPage"> Услуги</a></li>
+        <li><a href="#thirdPage">Примеры</a></li>
+        <li><a href="#fourthPage">Наши клиенты</a></li>
+        <li><a href="#fifthPage">Вопросы</a></li>
+        <li><a href="#sixthPage">Контакты</a></li>
+        
       </ul>
     </div>
     <div id="fullpage">
-      <div class="section s1">
+      <div class="section s1" data-anchor="slide1">
         <div class="header_text">
           <div class="header_title">
             Мы создаем
@@ -262,11 +262,10 @@
             </div>
           </div>
           <div></div>
-          <div class="advertising_text">
-            Женщины охотно подчиняются моде, потому что знают: чтобы содержимое
-            не приедалось, нужно почаще менять упаковку
+          <div class="advertising_text" style="align-self: center;">
+            Упаковка важна так же, как и продукт, иногда даже важнее
           </div>
-          <div class="advertising_autor">(с) Ноуел Ковард</div>
+          <div class="advertising_autor">(с) Джек Паул</div>
         </div>
       </div>
       <div class="section s4">
@@ -322,6 +321,7 @@
     <script>
       new fullpage("#fullpage", {
         autoScrolling: true,
+        anchors:['firstPage', 'secondPage', 'thirdPage','fourthPage', 'fifthPage','sixthPage','seventhPage','eighthPage']
       });
     </script>
   </body>
