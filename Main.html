@@ -14,20 +14,6 @@
   </head>
 
   <body>
-    <script>
-      var t;
-      function up() {
-        var top = Math.max(
-          document.body.scrollTop,
-          document.documentElement.scrollTop
-        );
-        if (top > 0) {
-          window.scrollBy(0, -200);
-          t = setTimeout("up()", 20);
-        } else clearTimeout(t);
-        return false;
-      }
-    </script>
 
     <div>
       <ul class="menu-main">
@@ -52,9 +38,9 @@
     <div id="fullpage">
       <div class="section s1">
         <div class="header_text">
-          <h1 class="header_title">
+          <div class="header_title">
             Мы создаем
-          </h1>
+          </div>
           <div class="ul_wrapper">
             <ul class="header_ul">
               <li>Пакеты для торговой сети</li>
@@ -275,13 +261,12 @@
               </div>
             </div>
           </div>
-          <div>
-            <div class="">
-              Женщины охотно подчиняются моде, потому что знают: чтобы
-              содержимое не приедалось, нужно почаще менять упаковку
-            </div>
-            <div class="">(с) Ноуел Ковард</div>
+          <div></div>
+          <div class="advertising_text">
+            Женщины охотно подчиняются моде, потому что знают: чтобы содержимое
+            не приедалось, нужно почаще менять упаковку
           </div>
+          <div class="advertising_autor">(с) Ноуел Ковард</div>
         </div>
       </div>
       <div class="section s4">
