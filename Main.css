@@ -365,6 +365,7 @@ body {
   height: 100%;
   background-color: white;
   color: black;
+  background: linear-gradient(to top left, rgb(235, 235, 235), white);
 }
 .product_title {
   font-weight: bold;
@@ -431,7 +432,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 25%;
+  height: 23%;
 }
 .sevices_image {
   width: 400px;
@@ -487,22 +488,27 @@ body {
   flex-direction: column;
 }
 .client_wrapper{
-  display: flex;
   align-self: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.client_row{
+  align-self: center;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .client{
-  
+  width: 210px;
+  height: 210px;
+  margin: 10px;
 }
-.client_photo{
-  
-}
-.client_review{
-  
-  
-}
+
 /* houston */
 .houston {
   position: absolute;
