@@ -1,21 +1,34 @@
 const clientWidth = document.body.clientWidth;
 var a_list = document.getElementsByTagName("a");
 if (clientWidth > 1100) {
+  window.onload = function () {
+    history.pushState("", document.title, window.location.pathname);
+    // к этому моменту страница загружена
+    const parallax = document.getElementById("parallax");
+    parallax.style.top = 0;
+    parallax.style.left = 0;
+    parallax.onwheel = function() {
+      if(event.ctrlKey) {
+          return false;
+      }
+      var scale = 1.0;
+  }
+  };
   new fullpage("#fullpage", {
+    menu: '#menu',
     autoScrolling: true,
-    scrollingSpeed: 1200,
+    scrollingSpeed: 1500,
     responsiveWidth: 1100,
     easing: "easeInOutCubic",
-    normalScrollElements: "#firstPage, #secondPage",
     anchors: [
-      "firstPage",
-      "secondPage",
-      "thirdPage",
-      "fourthPage",
-      "fifthPage",
-      "sixthPage",
-      "seventhPage",
-      "eighthPage",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
     ],
     onLeave: (origin, destination, direction) => {
       const section = destination.item;
@@ -27,189 +40,274 @@ if (clientWidth > 1100) {
         "advertising_autor"
       );
       const parallax = document.getElementById("parallax");
-      const coords = parallax.getBoundingClientRect()
+      const coords = parallax.getBoundingClientRect();
       // timelines
       const tl = new TimelineMax({ delay: 0.5 });
       const tl2 = new TimelineMax({ delay: 0.4 });
-      const tl3 = new TimelineMax({delay: 0.3});
+      const tl3 = new TimelineMax({ delay: 0.3 });
       const tl4 = new TimelineMax({ delay: 0.4 });
       // parallax
-       
-    //   scroll
+
+      //   scroll
       // down
       if (destination.index == "0" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: "0" }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: "0" },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "1" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "2" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "3" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "4" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "5" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top}, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "6" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "7" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "8" && direction == "down") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
 
-     
       if (destination.index == "0" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
-        console.log(-(destination.index)*40)
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
+        console.log(-destination.index * 40);
       }
       if (destination.index == "1" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
-        console.log(-(destination.index)*40)
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
+        console.log(-destination.index * 40);
       }
       if (destination.index == "2" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
-        console.log(-(destination.index)*40)
-
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
+        console.log(-destination.index * 40);
       }
       if (destination.index == "3" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "4" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "5" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top}, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "6" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "7" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
       if (destination.index == "8" && direction == "up") {
-        console.log(destination.index)
-        tl3.fromTo(parallax, 1, { y: coords.top }, { y: -(destination.index+1)*40 });
+        console.log(destination.index);
+        tl3.fromTo(
+          parallax,
+          1,
+          { y: coords.top },
+          { y: -(destination.index + 1) * 40 }
+        );
       }
 
       // up
 
-     
-    // click
-    // for (let m = 1;m <= 7;m++ ){
-    //     a_list[m].addEventListener('click',function(){
-    //         if (destination.index == 0  && direction == "down"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 1  && direction == "down"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 0.1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 2  && direction == "down"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 3  && direction == "down"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 4  && direction == "down"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 5  && direction == "down"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 6  && direction == "down"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 7  && direction == "down"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
+      // click
+      // for (let m = 1;m <= 7;m++ ){
+      //     a_list[m].addEventListener('click',function(){
+      //         if (destination.index == 0  && direction == "down"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 1  && direction == "down"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 0.1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 2  && direction == "down"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 3  && direction == "down"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 4  && direction == "down"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 5  && direction == "down"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 6  && direction == "down"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 7  && direction == "down"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
 
+      //         if (destination.index == 0  && direction == "up"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 1  && direction == "up"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 0.1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 2  && direction == "up"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 3  && direction == "up"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 4  && direction == "up"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 5  && direction == "up"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 6  && direction == "up"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
+      //             console.log(result)
+      //         }
+      //         if (destination.index == 7  && direction == "up"){
+      //             let result = (origin.index - destination.index)*40
+      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
+      //             console.log(result)
+      //         }
 
-    //         if (destination.index == 0  && direction == "up"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 1  && direction == "up"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 0.1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 2  && direction == "up"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 3  && direction == "up"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 4  && direction == "up"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 5  && direction == "up"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 6  && direction == "up"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-    //             console.log(result)
-    //         }
-    //         if (destination.index == 7  && direction == "up"){
-    //             let result = (origin.index - destination.index)*40
-    //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-    //             console.log(result)
-    //         }
-            
-    //     })
-    // }
-     
-// origin с которого
+      //     })
+      // }
 
+      // origin с которого
 
       // animation for all pages
       tl.fromTo(title, 0.5, { x: "-300", opacity: 0 }, { x: "0", opacity: 1 });
@@ -425,9 +523,10 @@ if (clientWidth > 1100) {
           }
         }
       }
-      a_list[1].addEventListener('click',function(){
-          parallax.style.position.top == '-500px'
-      })
+      a_list[1].addEventListener("click", function () {
+        parallax.style.position.top == "-500px";
+      });
     },
   });
 }
+fullpage_api.setAllowScrolling(true);
