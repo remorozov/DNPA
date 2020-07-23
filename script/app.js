@@ -30,6 +30,8 @@ if (clientWidth > 1100) {
       const advertising_autor = section.getElementsByClassName(
         "advertising_autor"
       );
+      const contacts_menu = document.getElementsByClassName('contacts_menu')[0]
+      
       const parallax = document.getElementById("parallax");
       const coords = parallax.getBoundingClientRect();
       // timelines
@@ -218,6 +220,8 @@ if (clientWidth > 1100) {
             a_list[n].className = "header_button";
           }
         }
+        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+
       }
       if (destination.index === 1) {
         const slider = document.getElementsByClassName("slider");
@@ -251,6 +255,8 @@ if (clientWidth > 1100) {
           { x: "300", opacity: 0 },
           { x: "0", opacity: 1 }
         );
+        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+
       }
       if (destination.index === 2) {
         const slider1 = document.getElementsByClassName("slider1");
@@ -285,6 +291,8 @@ if (clientWidth > 1100) {
           { x: "300", opacity: 0 },
           { x: "0", opacity: 1 }
         );
+        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+
       }
       if (destination.index === 3) {
         const services_item = document.getElementsByClassName("services_item");
@@ -322,6 +330,8 @@ if (clientWidth > 1100) {
           { x: "-300", opacity: 0 },
           { x: "0", opacity: 1 }
         );
+        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+
       }
       if (destination.index === 4) {
         const slider2 = document.getElementsByClassName("slider2");
@@ -359,6 +369,8 @@ if (clientWidth > 1100) {
           { x: "300", opacity: 0 },
           { x: "0", opacity: 1 }
         );
+        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+
       }
       if (destination.index === 5) {
         const slider2 = document.getElementsByClassName("slider2");
@@ -378,6 +390,8 @@ if (clientWidth > 1100) {
             a_list[n].className = "header_button";
           }
         }
+        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+
       }
       if (destination.index === 6) {
         const slider2 = document.getElementsByClassName("slider2");
@@ -397,6 +411,7 @@ if (clientWidth > 1100) {
             a_list[n].className = "header_button";
           }
         }
+        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
       }
       if (destination.index === 7) {
         const slider2 = document.getElementsByClassName("slider2");
@@ -416,6 +431,7 @@ if (clientWidth > 1100) {
             a_list[n].className = "header_button";
           }
         }
+        tl4.fromTo(contacts_menu, 1, {x:0},{marginRight:'25%',marginBottom: '8%',height: 400})
       }
       a_list[1].addEventListener("click", function () {
         parallax.style.position.top == "-500px";
