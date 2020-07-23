@@ -8,7 +8,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "HelveticaNeueCyr", sans-serif;
 }
 /* header */
 .menu-main {
@@ -35,14 +35,38 @@ body {
   background: rgb(0, 0, 0);
   z-index: 5;
 }
-
+.menu-main_logo{
+  z-index: -5;
+  background: linear-gradient(359deg, #ffffff, #5c5c5c);
+  background-size: 400% 400%;
+  -webkit-animation: logo_gradient 7s ease infinite;
+  -moz-animation: logo_gradient 7s ease infinite;
+  animation: logo_gradient 7s ease infinite;
+  height: 50px;
+  width: 50px;
+}
+@-webkit-keyframes logo_gradient {
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}
+@-moz-keyframes logo_gradient {
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}
+@keyframes logo_gradient {
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}
 .menu-main_logo:active {
   outline: 0;
 }
 
 .header_button {
   text-decoration: none;
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "HelveticaNeueCyr", sans-serif;
   letter-spacing: 2px;
   position: relative;
   margin: 0 34px 0 34px;
@@ -60,7 +84,7 @@ body {
 
 .header_button_active {
   text-decoration: none;
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "HelveticaNeueCyr", sans-serif;
   letter-spacing: 2px;
   position: relative;
   margin: 0 34px 0 34px;
@@ -101,7 +125,7 @@ body {
   overflow: hidden;
   width: calc(100% + 5px);
   height: 150%;
-  background-image: url(Pic/car.jpg);
+  background-image: url(Pic/dud.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: border-box;
@@ -110,7 +134,7 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  width : 85px;
+  width : 90px;
   height: 250px;
   z-index: 9;
   display: flex;
@@ -118,6 +142,8 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
+
 .header_title {
   font-weight: bold;
   -ms-flex-item-align: center;
@@ -125,22 +151,37 @@ body {
   align-self: center;
   font-size: 42px;
   margin: 25px;
-  -webkit-transition: 0.5s ease-in;
-  -o-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
-  background: -o-linear-gradient(150deg, white, rgba(123, 196, 255, 0.925));
-  background: linear-gradient(-60deg, white, rgba(123, 196, 255, 0.925));
-  background-size: 300%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.header_title:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  color:white;
 }
 
+span{
+  opacity: 0;
+  transition: all 0.8s ease;
+  transform: translateY(50px);
+  display: inline-block;  
+}
+span.fade{
+  opacity: 1;
+  transform: translateY(0px);
+  animation-delay: 2s;
+  animation: fly 4s ease-in-out infinite;
+
+}
+@keyframes fly{
+  0%{
+    color:rgba(217, 167, 233, 0.918);
+    font-size: 42px;
+  }
+  50%{
+    color:gold;
+    font-size: 35px;
+
+  }
+  100%{
+    color:rgba(217, 167, 233, 0.918);
+    font-size: 42px;
+  }
+}
 .ul_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -527,6 +568,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: white;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -536,6 +578,25 @@ body {
   height: 100%;
 }
 .product_title {
+  display: block;
+  font-weight: bold;
+  font-family: "HelveticaNeueCyr", sans-serif;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  font-size: 42px;
+  margin: 25px;
+  z-index: 8;
+  background: -o-linear-gradient(150deg, black, #847996);
+  background: linear-gradient(-60deg, black, #847996);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+.product_title_active {
   display: block;
   font-weight: bold;
   -ms-flex-item-align: center;
@@ -549,12 +610,11 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 }
-.product_title:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
+
+
+
 .product_wrapper {
   -ms-flex-item-align: center;
   align-self: center;
@@ -620,6 +680,7 @@ body {
   flex-direction: row;
   width: 50%;
   background-color: gainsboro;
+  transition: 0.5s ease-in;
 }
 
 .product_image {
@@ -628,20 +689,17 @@ body {
   height: 0px;
   overflow: hidden;
   padding-bottom: 56.25%;
-  background: url(http://files.all-free-download.com//downloadfiles/wallpapers/1280_720/heihachi_mishima_tekken_7_4k_17496.jpg)
-    no-repeat center;
-  background-size: cover;
-  background-color: gold;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 0.7;
+  background-color: white;
+  
 }
-.product_image:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  opacity: 1;
+.product_img{
+  transition: 0.5s ease-in;
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 175px;
+  height: 196px;
 }
 .product_name {
   width: 100%;
@@ -656,6 +714,30 @@ body {
   background-color: gray;
   color: rgb(0, 0, 0);
 }
+/* test id for img */
+#product_img_1{
+  transform: scale(1.5);
+}
+#product_img_2{
+  transform: scale(1.4) rotate(15deg);
+}
+#product_img_3{
+  filter: grayscale(100%);
+}
+#product_img_4{
+  
+}
+
+#product_image_5{
+  background-color: #1abc9c;
+}
+
+
+
+
+
+
+
 /* services */
 .services {
   position: absolute;

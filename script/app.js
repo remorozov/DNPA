@@ -7,29 +7,20 @@ if (clientWidth > 1100) {
     const parallax = document.getElementById("parallax");
     parallax.style.top = 0;
     parallax.style.left = 0;
-    parallax.onwheel = function() {
-      if(event.ctrlKey) {
-          return false;
+    parallax.onwheel = function () {
+      if (event.ctrlKey) {
+        return false;
       }
       var scale = 1.0;
-  }
+    };
   };
   new fullpage("#fullpage", {
-    menu: '#menu',
+    menu: "#menu",
     autoScrolling: true,
     scrollingSpeed: 1500,
     responsiveWidth: 1100,
     easing: "easeInOutCubic",
-    anchors: [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-    ],
+    anchors: ["a", "b", "c", "d", "e", "f", "g", "h"],
     onLeave: (origin, destination, direction) => {
       const section = destination.item;
       const title = section.getElementsByClassName("product_title");
@@ -46,12 +37,12 @@ if (clientWidth > 1100) {
       const tl2 = new TimelineMax({ delay: 0.4 });
       const tl3 = new TimelineMax({ delay: 0.3 });
       const tl4 = new TimelineMax({ delay: 0.4 });
-      // parallax
 
       //   scroll
       // down
       if (destination.index == "0" && direction == "down") {
-        console.log(destination.index);
+        console.log(title);
+
         tl3.fromTo(
           parallax,
           1,
@@ -60,7 +51,7 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "1" && direction == "down") {
-        console.log(destination.index);
+        console.log(title);
         tl3.fromTo(
           parallax,
           1,
@@ -69,7 +60,8 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "2" && direction == "down") {
-        console.log(destination.index);
+        console.log(title);
+
         tl3.fromTo(
           parallax,
           1,
@@ -78,7 +70,7 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "3" && direction == "down") {
-        console.log(destination.index);
+        console.log(title);
         tl3.fromTo(
           parallax,
           1,
@@ -87,7 +79,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "4" && direction == "down") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -96,7 +87,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "5" && direction == "down") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -105,7 +95,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "6" && direction == "down") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -114,7 +103,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "7" && direction == "down") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -123,7 +111,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "8" && direction == "down") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -133,7 +120,6 @@ if (clientWidth > 1100) {
       }
 
       if (destination.index == "0" && direction == "up") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -143,7 +129,6 @@ if (clientWidth > 1100) {
         console.log(-destination.index * 40);
       }
       if (destination.index == "1" && direction == "up") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -154,6 +139,7 @@ if (clientWidth > 1100) {
       }
       if (destination.index == "2" && direction == "up") {
         console.log(destination.index);
+
         tl3.fromTo(
           parallax,
           1,
@@ -217,100 +203,8 @@ if (clientWidth > 1100) {
         );
       }
 
-      // up
-
-      // click
-      // for (let m = 1;m <= 7;m++ ){
-      //     a_list[m].addEventListener('click',function(){
-      //         if (destination.index == 0  && direction == "down"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 1  && direction == "down"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 0.1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 2  && direction == "down"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 3  && direction == "down"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 4  && direction == "down"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 5  && direction == "down"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 6  && direction == "down"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 7  && direction == "down"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-
-      //         if (destination.index == 0  && direction == "up"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 1  && direction == "up"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 0.1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 2  && direction == "up"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 3  && direction == "up"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 4  && direction == "up"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 5  && direction == "up"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 6  && direction == "up"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top });
-      //             console.log(result)
-      //         }
-      //         if (destination.index == 7  && direction == "up"){
-      //             let result = (origin.index - destination.index)*40
-      //             tl3.fromTo(parallax, 1, { y: coords.top }, { y: !result*coords.top  });
-      //             console.log(result)
-      //         }
-
-      //     })
-      // }
-
-      // origin с которого
-
       // animation for all pages
-      tl.fromTo(title, 0.5, { x: "-300", opacity: 0 }, { x: "0", opacity: 1 });
+
       if (destination.index === 0) {
         a_list[1].style.color = "rgb(190, 191, 195)";
         a_list[2].style.color = "rgb(190, 191, 195)";
@@ -530,3 +424,104 @@ if (clientWidth > 1100) {
   });
 }
 fullpage_api.setAllowScrolling(true);
+
+let product_img = document.getElementsByClassName("product_img");
+let product_name = document.getElementsByClassName("product_name");
+
+product_name[0].addEventListener("mouseover", function () {
+  product_img[0].style.transform = "scale(1.3)";
+  product_img[0].style.transition = ".3s ease-in-out";
+});
+product_name[0].addEventListener("mouseout", function () {
+  product_img[0].style.transform = "scale(1)";
+  product_img[0].style.transition = ".3s ease-in-out";
+});
+
+product_name[1].addEventListener("mouseover", function () {
+  product_img[1].style.transform = "scale(1)";
+  product_img[1].style.transition = ".3s ease-in-out";
+});
+product_name[1].addEventListener("mouseout", function () {
+  product_img[1].style.transform = "scale(1.5)";
+  product_img[1].style.transition = ".3s ease-in-out";
+});
+
+product_name[2].addEventListener("mouseover", function () {
+  product_img[2].style.transform = "scale(1)";
+  product_img[2].style.transform = "rotate(0)";
+  product_img[2].style.transition = ".3s ease-in-out";
+});
+product_name[2].addEventListener("mouseout", function () {
+  product_img[2].style.transform = "scale(1.5) rotate(15deg)";
+  product_img[2].style.transition = ".3s ease-in-out";
+});
+
+product_name[3].addEventListener("mouseover", function () {
+  product_img[3].style.filter = "grayscale(0%)";
+  product_img[3].style.transition = ".3s ease-in-out";
+});
+product_name[3].addEventListener("mouseout", function () {
+  product_img[3].style.filter = "grayscale(100%)";
+  product_img[3].style.transition = ".3s ease-in-out";
+});
+
+product_name[4].addEventListener("mouseover", function () {
+  product_img[4].style.opacity = "0.5";
+  product_img[4].style.transition = ".3s ease-in-out";
+});
+product_name[4].addEventListener("mouseout", function () {
+  product_img[4].style.opacity = "0.8";
+  product_img[4].style.transition = ".3s ease-in-out";
+});
+
+product_name[5].addEventListener("mouseover", function () {
+  product_img[5].style.opacity = "0.7";
+  product_img[5].style.transition = ".3s ease-in-out";
+});
+product_name[5].addEventListener("mouseout", function () {
+  product_img[5].style.opacity = "1";
+  product_img[5].style.transition = ".3s ease-in-out";
+});
+
+// contacts tg vb whts
+
+let social = document.getElementsByClassName("contacts_menu_img");
+for (let a of social) {
+  a.addEventListener("mouseover", function () {
+    a.className = "animate__animated animate__heartBeat animate__infinite";
+  });
+  a.addEventListener("mouseout", function () {
+    a.className = "";
+  });
+}
+
+// header animation
+let header_title = document.querySelector(".header_title");
+let strText = header_title.textContent;
+let splitText = strText.split("").slice(13, 23);
+header_title.textContent = ""
+for (let i = 0; i < splitText.length; i++) {
+  if (splitText[i] == ' '){
+    splitText[i] = '&nbsp;'
+  }
+  header_title.innerHTML += "<span>" + splitText[i] + "</span>";
+}
+
+let char = 0
+let timer = setInterval(onTick,50)
+
+function onTick(){
+  const span = header_title.querySelectorAll('span')[char]
+  span.classList.add('fade')
+  char++
+  if (char == splitText.length){
+    complete();
+    return;
+  }
+}
+
+
+function complete(){
+  clearInterval(timer)
+  timer = null
+}

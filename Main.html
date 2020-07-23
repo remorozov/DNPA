@@ -7,44 +7,43 @@
     <link rel="shortcut icon" href="Pic/logo.ico" type="image/jpg" />
     <link rel="stylesheet" href="Main.css" />
     <link rel="stylesheet" href="script/fullpage.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
   </head>
 
   <body>
     <div id="parallax"></div>
     <div class="contacts_menu">
-      <img width="67px" height="67px"  src="Pic/telegram.svg" style="cursor: pointer;" />
-      <img width="67px" height="67px"   src="Pic/viber.svg" style="cursor: pointer;"  />
-      <img width="67px" height="67px"  src="Pic/whatsapp.svg" style="cursor: pointer;" />
+      <img width="67px" height="67px" class="contacts_menu_img" src="Pic/telegram.svg" style="cursor: pointer;" />
+      <img width="67px" height="67px" class="contacts_menu_img" src="Pic/viber.svg" style="cursor: pointer;"  />
+      <img width="67px" height="67px" class="contacts_menu_img" src="Pic/whatsapp.svg" style="cursor: pointer;" />
     </div>
     <ul class="menu-main" id="menu">
       <li>
-        <a href="#1">
-          <div class="menu-main_logo">
-            <img
-              src="Pic/logo.jpg"
-              style="width: 50x; height: 50px; cursor: pointer;"
-            />
-          </div>
+        <a class="header_button" href="#a">
+          <img width="50px" class="menu-main_logo" height="50px" src="Pic/logo.png">
         </a>
       </li>
 
       <li>
-        <a class="header_button" href="#3">Продукция</a>
+        <a class="header_button" href="#c">Продукция</a>
       </li>
       <li>
-        <a class="header_button" href="#4">Услуги</a>
+        <a class="header_button" href="#d">Услуги</a>
       </li>
       <li>
-        <a class="header_button" href="#5">Примеры</a>
+        <a class="header_button" href="#e">Примеры</a>
       </li>
       <li>
-        <a class="header_button" href="#6">Наши клиенты</a>
+        <a class="header_button" href="#f">Наши клиенты</a>
       </li>
       <li>
-        <a class="header_button" href="#7">Вопросы</a>
+        <a class="header_button" href="#g">Вопросы</a>
       </li>
       <li>
-        <a class="header_button" href="#8">Контакты</a>
+        <a class="header_button" href="#h">Контакты</a>
       </li>
       <div class="bubble"></div>
     </ul>
@@ -423,44 +422,44 @@
                 <div class="slider__item1">
                   <div class="product_row">
                     <div class="product_item">
-                      <div class="product_image"></div>
+                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg"></div>
                       <div class="product_name"></div>
                     </div>
                     <div class="product_item">
-                      <div class="product_image"></div>
+                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg" id="product_img_1"></div>
                       <div class="product_name"></div>
                     </div>
                   </div>
                   <div class="product_row">
                     <div class="product_item">
                       <div class="product_name"></div>
-                      <div class="product_image"></div>
+                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg" id="product_img_2"></div>
                     </div>
                     <div class="product_item">
                       <div class="product_name"></div>
-                      <div class="product_image"></div>
+                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg" id="product_img_3"></div>
                     </div>
                   </div>
                 </div>
                 <div class="slider__item1">
                   <div class="product_row">
                     <div class="product_item">
-                      <div class="product_image"></div>
+                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg" id="product_img_4"></div>
                       <div class="product_name"></div>
                     </div>
                     <div class="product_item">
-                      <div class="product_image"></div>
+                      <div class="product_image" id='product_image_5'><img class="product_img" src="Pic/bmw.jpg" id="product_img_5"></div>
                       <div class="product_name"></div>
                     </div>
                   </div>
                   <div class="product_row">
                     <div class="product_item">
                       <div class="product_name"></div>
-                      <div class="product_image"></div>
+                      <div class="product_image"><img class="product_img" src="https://dummyimage.com/175x197/000000/ff0000.png&text=мяу"></div>
                     </div>
                     <div class="product_item">
                       <div class="product_name"></div>
-                      <div class="product_image"></div>
+                      <div class="product_image"><img class="product_img" src="https://dummyimage.com/175x197/000000/ff0000.png&text=мяу"></div>
                     </div>
                   </div>
                 </div>
@@ -568,7 +567,7 @@
                   _config = {
                     isCycling: false, // автоматическая смена слайдов
                     direction: "right", // направление смены слайдов
-                    interval: 4300, // интервал между автоматической сменой слайдов
+                    interval: 8300, // интервал между автоматической сменой слайдов
                     pause: true, // устанавливать ли паузу при поднесении курсора к слайдеру
                   };
 
@@ -1213,6 +1212,7 @@
       integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js" integrity="sha512-rBvJrSgappbpVQiWJabYgWL32JOqZbhh4cxtj3iWEKx7yVS/h6c2r4q4pwp5AIcF5yvCQzbo+GPwelUjfxaG7Q==" crossorigin="anonymous"></script>
     <script src="script/fullpage.min.js"></script>
     <script src="script/app.js"></script>
   </body>
