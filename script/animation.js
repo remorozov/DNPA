@@ -1,6 +1,6 @@
 let product_img = document.getElementsByClassName("product_img");
 let product_name = document.getElementsByClassName("product_name");
-
+var images = ['goods1.jpg', 'goods2.jpg'];
 product_name[0].addEventListener("mouseover", function () {
   product_img[0].style.transform = "scale(1.3)";
   product_img[0].style.transition = ".3s ease-in-out";
@@ -69,32 +69,150 @@ for (let a of social) {
 }
 
 // header animation
-let header_title = document.querySelector(".header_title");
-let strText = header_title.textContent;
-let splitText = strText.split("").slice(13, 23);
-header_title.textContent = ""
-for (let i = 0; i < splitText.length; i++) {
-  if (splitText[i] == ' '){
-    splitText[i] = '&nbsp;'
-  }
-  header_title.innerHTML += "<span>" + splitText[i] + "</span>";
+let product_title = document.querySelectorAll(".product_title");
+
+let strText = [];
+for (let i = 0; i < product_title.length; i++) {
+  strText.push(product_title[i].textContent);
 }
 
-let char = 0
-let timer = setInterval(onTick,50)
+for (let i of strText) {
+  let str = i;
+  for (let a of str) {
+    if (a == " ") {
+      a = "&nbsp;";
+    }
+  }
+}
 
-function onTick(){
-  const span = header_title.querySelectorAll('span')[char]
-  span.classList.add('fade')
-  char++
-  if (char == splitText.length){
+let splitText = [];
+for (let a = 0; a < strText.length; a++) {
+  if (a == 0) {
+    splitText.push(strText[a].split("").slice(13, 23));
+  }
+  if (a == 1) {
+    splitText.push(strText[a].split(""));
+  }
+  if (a == 2) {
+    splitText.push(strText[a].split("").slice(13, 54));
+  }
+  if (a == 3) {
+    splitText.push(strText[a].split("").slice(13, 106));
+  }
+  if (a == 4) {
+    splitText.push(strText[a].split(""));
+  }
+}
+splitText[3].splice(66, 12);
+for (let a of product_title) {
+  a.textContent = "";
+}
+// let splitText = strText.split("").slice(13, 23);
+// header_title.textContent = ""
+for (let n = 0; n < product_title.length; n++) {
+  
+    for (let char of splitText[n]){
+      if (char == ' '){
+         char = '&nbsp;'
+      }
+      product_title[n].innerHTML += '<span>'+char+'</span>'
+    }
+  
+}
+let char = 0;
+let char1 = 0;
+let char2 = 0;
+let char3 = 0;
+let char4 = 0;
+
+let timer = setInterval(function(){onTick(0)}, 50);
+let timer1 = setInterval(function(){onTick1(1)}, 50);
+let timer2 = setInterval(function(){onTick2(2)}, 50);
+let timer3 = setInterval(function(){onTick3(3)}, 50);
+let timer4 = setInterval(function(){onTick4(4)}, 50);
+
+
+
+
+
+function onTick(a) {
+  
+  const span = product_title[a].querySelectorAll("span")[char];
+  span.classList.add("fade");
+  char++;
+  if (char == splitText[a].length) {
     complete();
     return;
   }
 }
 
-
-function complete(){
-  clearInterval(timer)
-  timer = null
+function complete() {
+  clearInterval();
+  timer = null;
 }
+
+
+function onTick1(a) {
+  
+  const span = product_title[a].querySelectorAll("span")[char1];
+  span.classList.add("fade");
+  char1++;
+  if (char1 == splitText[a].length) {
+    complete1();
+    return;
+  }
+}
+
+function complete1() {
+  clearInterval();
+  timer1 = null;
+}
+
+function onTick2(a) {
+  
+  const span = product_title[a].querySelectorAll("span")[char2];
+  span.classList.add("fade");
+  char2++;
+  if (char2 == splitText[a].length) {
+    complete2();
+    return;
+  }
+}
+
+function complete2() {
+  clearInterval();
+  timer2 = null;
+}
+
+function onTick3(a) {
+  
+  const span = product_title[a].querySelectorAll("span")[char3];
+  span.classList.add("fade");
+  char3++;
+  if (char3 == splitText[a].length) {
+    complete3();
+    return;
+  }
+}
+
+function complete3() {
+  clearInterval();
+  timer3 = null;
+}
+
+function onTick4(a) {
+  
+  const span = product_title[a].querySelectorAll("span")[char4];
+  span.classList.add("fade");
+  char4++;
+  if (char4 == splitText[a].length) {
+    complete4();
+    return;
+  }
+}
+
+function complete4() {
+  clearInterval();
+  timer4 = null;
+}
+

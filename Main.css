@@ -68,6 +68,7 @@ body {
   font-size: 17px;
   -webkit-transition: color 0.2s;
   -o-transition: color 0.2s;
+  color: rgb(190, 191, 195);
   transition: color 0.2s;
 }
 .header_button:visited {
@@ -76,7 +77,9 @@ body {
 .header_button:hover {
   opacity: 0.7;
 }
-
+A:active {
+  color: rgb(190, 191, 195);/* Цвет активных ссылок */
+ }
 .header_button_active {
   text-decoration: none;
   font-family: "HelveticaNeueCyr", sans-serif;
@@ -120,7 +123,7 @@ body {
   overflow: hidden;
   width: calc(100% + 5px);
   height: 150%;
-  background-image: url(Pic/dud.jpeg);
+  background-image: url(Pic/bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: border-box;
@@ -153,27 +156,25 @@ span{
   opacity: 0;
   transition: all 0.8s ease;
   transform: translateY(50px);
-  display: inline-block;  
+  display: inline-block; 
 }
 span.fade{
   opacity: 1;
   transform: translateY(0px);
   animation: fly 7s ease-in-out infinite;
+  color: white;
 
 }
 @keyframes fly{
   0%{
     color:rgba(217, 167, 233, 0.918);
-    font-size: 42px;
   }
   50%{
     color:gold;
-    font-size: 35px;
 
   }
   100%{
     color:rgba(217, 167, 233, 0.918);
-    font-size: 42px;
   }
 }
 .ul_wrapper {
@@ -233,6 +234,7 @@ span.fade{
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  background-color: rgba(255, 255, 255, 0.836);
   justify-content: center;
 }
 .advertising_wrapper {
@@ -543,6 +545,7 @@ span.fade{
   font-size: 28px;
   line-height: 31px;
   color: black;
+  
 }
 .advertising_autor {
   display: block;
@@ -568,6 +571,7 @@ span.fade{
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.76);
   /* background-color: white; */
   height: 100%;
 }
@@ -581,12 +585,7 @@ span.fade{
   font-size: 42px;
   margin: 25px;
   z-index: 8;
-  background: -o-linear-gradient(150deg, black, #847996);
-  background: linear-gradient(-60deg, black, #847996);
-  background-size: 300%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
   
 }
 
@@ -735,8 +734,9 @@ span.fade{
 /* services */
 .services {
   position: absolute;
+  background-color: rgba(255, 255, 255, 0.699);
   left: 0;
-  top: 0;
+  top: 50px;
   color: black;
   width: 100%;
   height: 100%;
@@ -758,25 +758,56 @@ span.fade{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
+  justify-content: space-evenly;
   width: 100%;
 }
-.sevices_image {
+.sevices_image{
+  width: 310px;
+  height: 190px;
+  position: relative;
+}
+.goods_img{
+  transition: 1s ease-in;
+  animation: change_img 2s linear infinite alternate; 
+  width: 310px;
+  height: 100%;
+  z-index: 4;
+}
+@keyframes change_img{
+0%{
+opacity: 0;
+}
+100%{
+opacity: 1;
+}
 }
 .sevices_image>img {
-  width: 320px;
-  height: 190px;
+  position:absolute;
+  top: 0%;
+  left: 0%;
+  width: 310px;
+  height: 100%;
 }
 .sevices_text {
+  font-size: 35px;
+  font-weight: bold;
   width: 500px;
+}
+#sevices_image_3{
+  background: linear-gradient(107deg, #878787, #00ae98);
+  background-size: 400% 400%;
+
+  -webkit-animation: logo_gradient 4s ease infinite;
+  -moz-animation: logo_gradient 4s ease infinite;
+  animation: logo_gradient 4s ease infinite;
+}
+
+@keyframes logo_gradient {
+  0%{background-position:90% 0%}
+  50%{background-position:11% 100%}
+  100%{background-position:100% 0%}
 }
 /* examples */
 .example {
@@ -909,8 +940,8 @@ span.fade{
   position: absolute;
   left: 0;
   top: 50px;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -934,7 +965,7 @@ span.fade{
   color: white;
   z-index: 8;
   letter-spacing: 3px;
-  mix-blend-mode: difference;
+  
 }
 .contact_wrapper{
   position: absolute;
@@ -968,4 +999,45 @@ span.fade{
 .active:hover {
   color: white;
   opacity: 1;
+}
+
+
+
+
+
+
+
+@media screen and (max-height: 800px) and (max-width: 1280px) {
+  .header_text {
+    height: 93%;
+  }
+  .advertising {
+    height: 93%;
+  }
+  .product{
+    height: 93%;
+  }
+  .services {
+    height: 93%;
+  }
+  .sevices_image>img {
+    height: 190px;
+    
+  }
+  .example{
+    height: 93%;
+
+  }
+  .clients{
+    height: 93%;
+
+  }
+  .houston{
+    height: 93%;
+  }
+  .slider_wrapper1 {
+   
+    height: 80%;
+    
+  }
 }

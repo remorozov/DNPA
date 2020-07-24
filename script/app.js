@@ -18,7 +18,6 @@ if (clientWidth > 1100) {
     menu: "#menu",
     autoScrolling: true,
     scrollingSpeed: 1500,
-    responsiveWidth: 1100,
     easing: "easeInOutCubic",
     anchors: ["a", "b", "c", "d", "e", "f", "g", "h"],
     onLeave: (origin, destination, direction) => {
