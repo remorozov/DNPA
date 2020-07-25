@@ -234,7 +234,7 @@ span.fade{
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  background-color: rgba(255, 255, 255, 0.836);
+  background: linear-gradient(white, rgba(255, 255, 255, 0.800));
   justify-content: center;
 }
 .advertising_wrapper {
@@ -565,13 +565,12 @@ span.fade{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.76);
+  background: linear-gradient(rgba(255, 255, 255, 0.800), rgba(255, 255, 255, 0.600));
   /* background-color: white; */
   height: 100%;
 }
@@ -726,15 +725,10 @@ span.fade{
 }
 
 
-
-
-
-
-
 /* services */
 .services {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.699);
+  background: linear-gradient(rgba(255, 255, 255, 0.600), rgba(0, 0, 0, 0.4));
   left: 0;
   top: 50px;
   color: black;
@@ -827,6 +821,8 @@ opacity: 1;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+
 }
 .example_package {
   display: -webkit-box;
@@ -878,6 +874,8 @@ opacity: 1;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+
   -ms-flex-align: center;
   align-items: center;
   /* background-color: white; */
@@ -933,6 +931,8 @@ opacity: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+
   flex-direction: column;
 }
 /* contacts */
