@@ -1,60 +1,3 @@
-let product_img = document.getElementsByClassName("product_img");
-let product_name = document.getElementsByClassName("product_name");
-var images = ['goods1.jpg', 'goods2.jpg'];
-product_name[0].addEventListener("mouseover", function () {
-  product_img[0].style.transform = "scale(1.3)";
-  product_img[0].style.transition = ".3s ease-in-out";
-});
-product_name[0].addEventListener("mouseout", function () {
-  product_img[0].style.transform = "scale(1)";
-  product_img[0].style.transition = ".3s ease-in-out";
-});
-
-product_name[1].addEventListener("mouseover", function () {
-  product_img[1].style.transform = "scale(1)";
-  product_img[1].style.transition = ".3s ease-in-out";
-});
-product_name[1].addEventListener("mouseout", function () {
-  product_img[1].style.transform = "scale(1.5)";
-  product_img[1].style.transition = ".3s ease-in-out";
-});
-
-product_name[2].addEventListener("mouseover", function () {
-  product_img[2].style.transform = "scale(1)";
-  product_img[2].style.transform = "rotate(0)";
-  product_img[2].style.transition = ".3s ease-in-out";
-});
-product_name[2].addEventListener("mouseout", function () {
-  product_img[2].style.transform = "scale(1.5) rotate(15deg)";
-  product_img[2].style.transition = ".3s ease-in-out";
-});
-
-product_name[3].addEventListener("mouseover", function () {
-  product_img[3].style.filter = "grayscale(0%)";
-  product_img[3].style.transition = ".3s ease-in-out";
-});
-product_name[3].addEventListener("mouseout", function () {
-  product_img[3].style.filter = "grayscale(100%)";
-  product_img[3].style.transition = ".3s ease-in-out";
-});
-
-product_name[4].addEventListener("mouseover", function () {
-  product_img[4].style.opacity = "0.5";
-  product_img[4].style.transition = ".3s ease-in-out";
-});
-product_name[4].addEventListener("mouseout", function () {
-  product_img[4].style.opacity = "0.8";
-  product_img[4].style.transition = ".3s ease-in-out";
-});
-
-product_name[5].addEventListener("mouseover", function () {
-  product_img[5].style.opacity = "0.7";
-  product_img[5].style.transition = ".3s ease-in-out";
-});
-product_name[5].addEventListener("mouseout", function () {
-  product_img[5].style.opacity = "1";
-  product_img[5].style.transition = ".3s ease-in-out";
-});
 
 // contacts tg vb whts
 
@@ -216,3 +159,16 @@ function complete4() {
   timer4 = null;
 }
 
+let swiper_slide = document.getElementsByClassName('swiper-slide')
+let pop_up = document.getElementById('pop_up')
+let pop_up_close = document.getElementsByClassName('pop_up_close')[0]
+pop_up_close.addEventListener('click',function(){
+  pop_up.hidden = true
+})
+pop_up.hidden = true
+
+for (let a of swiper_slide){
+  a.addEventListener('click',function(){
+    pop_up.hidden = false
+  })
+}

@@ -8,22 +8,50 @@
     <link rel="stylesheet" href="Main.css" />
     <link rel="stylesheet" href="script/fullpage.min.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
     <div id="parallax"></div>
     <div class="contacts_menu">
-      <img width="67px" height="67px" class="contacts_menu_img" src="Pic/telegram.svg" style="cursor: pointer;" />
-      <img width="67px" height="67px" class="contacts_menu_img" src="Pic/viber.svg" style="cursor: pointer;"  />
-      <img width="67px" height="67px" class="contacts_menu_img" src="Pic/whatsapp.svg" style="cursor: pointer;" />
+      <img
+        width="67px"
+        height="67px"
+        class="contacts_menu_img"
+        src="Pic/telegram.svg"
+        style="cursor: pointer;"
+      />
+      <img
+        width="67px"
+        height="67px"
+        class="contacts_menu_img"
+        src="Pic/viber.svg"
+        style="cursor: pointer;"
+      />
+      <img
+        width="67px"
+        height="67px"
+        class="contacts_menu_img"
+        src="Pic/whatsapp.svg"
+        style="cursor: pointer;"
+      />
     </div>
+    <div id="pop_up"><div id="pop_up_menu"><span class="pop_up_close"></span></div></div>
     <ul class="menu-main" id="menu">
       <li>
         <a class="header_button" href="#a">
-          <img width="50px" class="menu-main_logo" height="50px" src="Pic/logo.png">
+          <img
+            width="50px"
+            class="menu-main_logo"
+            height="50px"
+            src="Pic/logo.png"
+          />
         </a>
       </li>
 
@@ -74,9 +102,9 @@
           </div>
           <div id="video-bg">
             <video loop muted data-autoplay class="bg_video">
-              <source src="Pic/bg_video.mp4" type="video/mp4">
-          </video>
-        </div>
+              <source src="Pic/bg_video.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
       <div class="section">
@@ -417,381 +445,43 @@
         <div class="product">
           <div class="product_title">Мы сделаем для вас</div>
           <div class="slider_wrapper1">
-            <div class="slider1">
-              <div class="slider__wrapper1">
-                <div class="slider__item1">
-                  <div class="product_row">
-                    <div class="product_item">
-                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg"></div>
-                      <div class="product_name"></div>
-                    </div>
-                    <div class="product_item">
-                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg" id="product_img_1"></div>
-                      <div class="product_name"></div>
-                    </div>
-                  </div>
-                  <div class="product_row">
-                    <div class="product_item">
-                      <div class="product_name"></div>
-                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg" id="product_img_2"></div>
-                    </div>
-                    <div class="product_item">
-                      <div class="product_name"></div>
-                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg" id="product_img_3"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__item1">
-                  <div class="product_row">
-                    <div class="product_item">
-                      <div class="product_image"><img class="product_img" src="Pic/bmw.jpg" id="product_img_4"></div>
-                      <div class="product_name"></div>
-                    </div>
-                    <div class="product_item">
-                      <div class="product_image" id='product_image_5'><img class="product_img" src="Pic/bmw.jpg" id="product_img_5"></div>
-                      <div class="product_name"></div>
-                    </div>
-                  </div>
-                  <div class="product_row">
-                    <div class="product_item">
-                      <div class="product_name"></div>
-                      <div class="product_image"><img class="product_img" src="https://dummyimage.com/175x197/000000/ff0000.png&text=мяу"></div>
-                    </div>
-                    <div class="product_item">
-                      <div class="product_name"></div>
-                      <div class="product_image"><img class="product_img" src="https://dummyimage.com/175x197/000000/ff0000.png&text=мяу"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__item1">
-                  <div class="product_row">
-                    <div class="product_item">
-                      <div class="product_image"></div>
-                      <div class="product_name"></div>
-                    </div>
-                    <div class="product_item">
-                      <div class="product_image"></div>
-                      <div class="product_name"></div>
-                    </div>
-                  </div>
-                  <div class="product_row">
-                    <div class="product_item">
-                      <div class="product_name"></div>
-                      <div class="product_image"></div>
-                    </div>
-                    <div class="product_item">
-                      <div class="product_name"></div>
-                      <div class="product_image"></div>
-                    </div>
-                  </div>
-                </div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
               </div>
-              <a
-                class="slider__control1 slider__control_left1"
-                href="#"
-                role="button"
-              ></a>
-              <a
-                class="slider__control1 slider__control_right1"
-                href="#"
-                role="button"
-              ></a>
-            </div>
-            <div class="advertising_wrapper">
-              <div class="advertising_text">
-                Упаковка важна так же, как и продукт, иногда даже важнее
-              </div>
-              <div class="advertising_autor">
-                (с) Джек Паул
-              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
           <script>
-            var multiItemSlider = (function () {
-              function _isElementVisible(element) {
-                var rect = element.getBoundingClientRect(),
-                  vWidth = window.innerWidth || doc.documentElement.clientWidth,
-                  vHeight =
-                    window.innerHeight || doc.documentElement.clientHeight,
-                  elemFromPoint = function (x, y) {
-                    return document.elementFromPoint(x, y);
-                  };
-                if (
-                  rect.right < 0 ||
-                  rect.bottom < 0 ||
-                  rect.left > vWidth ||
-                  rect.top > vHeight
-                )
-                  return false;
-                return (
-                  element.contains(elemFromPoint(rect.left, rect.top)) ||
-                  element.contains(elemFromPoint(rect.right, rect.top)) ||
-                  element.contains(elemFromPoint(rect.right, rect.bottom)) ||
-                  element.contains(elemFromPoint(rect.left, rect.bottom))
-                );
-              }
-
-              return function (selector, config) {
-                var _mainElement = document.querySelector(selector), // основный элемент блока
-                  _sliderWrapper = _mainElement.querySelector(
-                    ".slider__wrapper1"
-                  ), // обертка для .slider-item
-                  _sliderItems = _mainElement.querySelectorAll(
-                    ".slider__item1"
-                  ), // элементы (.slider-item)
-                  _sliderControls = _mainElement.querySelectorAll(
-                    ".slider__control1"
-                  ), // элементы управления
-                  _sliderControlLeft = _mainElement.querySelector(
-                    ".slider__control_left1"
-                  ), // кнопка "LEFT"
-                  _sliderControlRight = _mainElement.querySelector(
-                    ".slider__control_right1"
-                  ), // кнопка "RIGHT"
-                  _wrapperWidth = parseFloat(
-                    getComputedStyle(_sliderWrapper).width
-                  ), // ширина обёртки
-                  _itemWidth = parseFloat(
-                    getComputedStyle(_sliderItems[0]).width
-                  ), // ширина одного элемента
-                  _positionLeftItem = 0, // позиция левого активного элемента
-                  _transform = 0, // значение транфсофрмации .slider_wrapper
-                  _step = (_itemWidth / _wrapperWidth) * 100, // величина шага (для трансформации)
-                  _items = [], // массив элементов
-                  _interval = 0,
-                  _html = _mainElement.innerHTML,
-                  _states = [
-                    { active: false, minWidth: 0, count: 1 },
-                    { active: false, minWidth: 980, count: 2 },
-                  ],
-                  _config = {
-                    isCycling: false, // автоматическая смена слайдов
-                    direction: "right", // направление смены слайдов
-                    interval: 8300, // интервал между автоматической сменой слайдов
-                    pause: true, // устанавливать ли паузу при поднесении курсора к слайдеру
-                  };
-
-                for (var key in config) {
-                  if (key in _config) {
-                    _config[key] = config[key];
-                  }
-                }
-
-                // наполнение массива _items
-                _sliderItems.forEach(function (item, index) {
-                  _items.push({ item: item, position: index, transform: 0 });
-                });
-
-                var _setActive = function () {
-                  var _index = 0;
-                  var width = parseFloat(document.body.clientWidth);
-                  _states.forEach(function (item, index, arr) {
-                    _states[index].active = false;
-                    if (width >= _states[index].minWidth) _index = index;
-                  });
-                  _states[_index].active = true;
-                };
-
-                var _getActive = function () {
-                  var _index;
-                  _states.forEach(function (item, index, arr) {
-                    if (_states[index].active) {
-                      _index = index;
-                    }
-                  });
-                  return _index;
-                };
-
-                var position = {
-                  getItemMin: function () {
-                    var indexItem = 0;
-                    _items.forEach(function (item, index) {
-                      if (item.position < _items[indexItem].position) {
-                        indexItem = index;
-                      }
-                    });
-                    return indexItem;
-                  },
-                  getItemMax: function () {
-                    var indexItem = 0;
-                    _items.forEach(function (item, index) {
-                      if (item.position > _items[indexItem].position) {
-                        indexItem = index;
-                      }
-                    });
-                    return indexItem;
-                  },
-                  getMin: function () {
-                    return _items[position.getItemMin()].position;
-                  },
-                  getMax: function () {
-                    return _items[position.getItemMax()].position;
-                  },
-                };
-
-                var _transformItem = function (direction) {
-                  var nextItem;
-                  if (!_isElementVisible(_mainElement)) {
-                    return;
-                  }
-                  if (direction === "right") {
-                    _positionLeftItem++;
-                    if (
-                      _positionLeftItem + _wrapperWidth / _itemWidth - 1 >
-                      position.getMax()
-                    ) {
-                      nextItem = position.getItemMin();
-                      _items[nextItem].position = position.getMax() + 1;
-                      _items[nextItem].transform += _items.length * 100;
-                      _items[nextItem].item.style.transform =
-                        "translateX(" + _items[nextItem].transform + "%)";
-                    }
-                    _transform -= _step;
-                  }
-                  if (direction === "left") {
-                    _positionLeftItem--;
-                    if (_positionLeftItem < position.getMin()) {
-                      nextItem = position.getItemMax();
-                      _items[nextItem].position = position.getMin() - 1;
-                      _items[nextItem].transform -= _items.length * 100;
-                      _items[nextItem].item.style.transform =
-                        "translateX(" + _items[nextItem].transform + "%)";
-                    }
-                    _transform += _step;
-                  }
-                  _sliderWrapper.style.transform =
-                    "translateX(" + _transform + "%)";
-                };
-
-                var _cycle = function (direction) {
-                  if (!_config.isCycling) {
-                    return;
-                  }
-                  _interval = setInterval(function () {
-                    _transformItem(direction);
-                  }, _config.interval);
-                };
-
-                // обработчик события click для кнопок "назад" и "вперед"
-                var _controlClick = function (e) {
-                  if (e.target.classList.contains("slider__control1")) {
-                    e.preventDefault();
-                    var direction = e.target.classList.contains(
-                      "slider__control_right1"
-                    )
-                      ? "right"
-                      : "left";
-                    _transformItem(direction);
-                    clearInterval(_interval);
-                    _cycle(_config.direction);
-                  }
-                };
-
-                // обработка события изменения видимости страницы
-                var _handleVisibilityChange = function () {
-                  if (document.visibilityState === "hidden") {
-                    clearInterval(_interval);
-                  } else {
-                    clearInterval(_interval);
-                    _cycle(_config.direction);
-                  }
-                };
-
-                var _refresh = function () {
-                  clearInterval(_interval);
-                  _mainElement.innerHTML = _html;
-                  _sliderWrapper = _mainElement.querySelector(
-                    ".slider__wrapper1"
-                  );
-                  _sliderItems = _mainElement.querySelectorAll(
-                    ".slider__item1"
-                  );
-                  _sliderControls = _mainElement.querySelectorAll(
-                    ".slider__control1"
-                  );
-                  _sliderControlLeft = _mainElement.querySelector(
-                    ".slider__control_left1"
-                  );
-                  _sliderControlRight = _mainElement.querySelector(
-                    ".slider__control_right1"
-                  );
-                  _wrapperWidth = parseFloat(
-                    getComputedStyle(_sliderWrapper).width
-                  );
-                  _itemWidth = parseFloat(
-                    getComputedStyle(_sliderItems[0]).width
-                  );
-                  _positionLeftItem = 0;
-                  _transform = 0;
-                  _step = (_itemWidth / _wrapperWidth) * 100;
-                  _items = [];
-                  _sliderItems.forEach(function (item, index) {
-                    _items.push({ item: item, position: index, transform: 0 });
-                  });
-                };
-
-                var _setUpListeners = function () {
-                  _mainElement.addEventListener("click", _controlClick);
-                  if (_config.pause && _config.isCycling) {
-                    _mainElement.addEventListener("mouseenter", function () {
-                      clearInterval(_interval);
-                    });
-                    _mainElement.addEventListener("mouseleave", function () {
-                      clearInterval(_interval);
-                      _cycle(_config.direction);
-                    });
-                  }
-                  document.addEventListener(
-                    "visibilitychange",
-                    _handleVisibilityChange,
-                    false
-                  );
-                  window.addEventListener("resize", function () {
-                    var _index = 0,
-                      width = parseFloat(document.body.clientWidth);
-                    _states.forEach(function (item, index, arr) {
-                      if (width >= _states[index].minWidth) _index = index;
-                    });
-                    if (_index !== _getActive()) {
-                      _setActive();
-                      _refresh();
-                    }
-                  });
-                };
-
-                // инициализация
-                _setUpListeners();
-                if (document.visibilityState === "visible") {
-                  _cycle(_config.direction);
-                }
-                _setActive();
-
-                return {
-                  right: function () {
-                    // метод right
-                    _transformItem("right");
-                  },
-                  left: function () {
-                    // метод left
-                    _transformItem("left");
-                  },
-                  stop: function () {
-                    // метод stop
-                    _config.isCycling = false;
-                    clearInterval(_interval);
-                  },
-                  cycle: function () {
-                    // метод cycle
-                    _config.isCycling = true;
-                    clearInterval(_interval);
-                    _cycle();
-                  },
-                };
-              };
-            })();
-
-            var slider = multiItemSlider(".slider1", {
-              isCycling: true,
+            var swiper = new Swiper(".swiper-container", {
+              slidesPerView: 5,
+              centeredSlides: true,
+              spaceBetween: 30,
+              height: 150,
+              autoHeight: false,
+              grabCursor: true,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
             });
           </script>
         </div>
@@ -799,8 +489,13 @@
       <div class="section">
         <div class="services">
           <div class="services_item" id="services_item_1">
-            <div class="sevices_image"><img src='Pic/goods1.jpg'><img class="goods_img" src='Pic/goods2.jpg'></div>
-            <div class="sevices_text"> 
+            <div class="sevices_image">
+              <img src="Pic/goods1.jpg" /><img
+                class="goods_img"
+                src="Pic/goods2.jpg"
+              />
+            </div>
+            <div class="sevices_text">
               Сделаем Ваш продукт заметным
             </div>
           </div>
@@ -808,10 +503,14 @@
             <div class="sevices_text">
               Нужна упаковка на вчера? Тогда Вам к нам
             </div>
-            <div class="sevices_image"><img src='Pic/lorry.png' height="400px"></div>
+            <div class="sevices_image">
+              <img src="Pic/lorry.png" height="400px" />
+            </div>
           </div>
           <div class="services_item" id="services_item_3">
-            <div class="sevices_image" id="sevices_image_3"><img src='Pic/map.png'></div>
+            <div class="sevices_image" id="sevices_image_3">
+              <img src="Pic/map.png" />
+            </div>
             <div class="sevices_text">
               Оперативная доставка по всей Украине
             </div>
@@ -1192,15 +891,15 @@
           </div>
           <div class="contact_wrapper">
             <div class="contact">
-             <div class="mail">
-               <p>example@gmail.com</p>
-             </div>
-             <div class="info">
-               <p>просп. Кирова 78А</p>
-               <p>+38 098 444 4444</p>
-               <p>+38 098 444 4444</p>
-               <p>+38 098 444 4444</p>
-             </div>
+              <div class="mail">
+                <p>example@gmail.com</p>
+              </div>
+              <div class="info">
+                <p>просп. Кирова 78А</p>
+                <p>+38 098 444 4444</p>
+                <p>+38 098 444 4444</p>
+                <p>+38 098 444 4444</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1216,7 +915,12 @@
       integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js" integrity="sha512-rBvJrSgappbpVQiWJabYgWL32JOqZbhh4cxtj3iWEKx7yVS/h6c2r4q4pwp5AIcF5yvCQzbo+GPwelUjfxaG7Q==" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"
+      integrity="sha512-rBvJrSgappbpVQiWJabYgWL32JOqZbhh4cxtj3iWEKx7yVS/h6c2r4q4pwp5AIcF5yvCQzbo+GPwelUjfxaG7Q=="
+      crossorigin="anonymous"
+    ></script>
+
     <script src="script/fullpage.min.js"></script>
     <script src="script/app.js"></script>
     <script src="script/animation.js"></script>
