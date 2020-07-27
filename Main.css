@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 /* header */
 .menu-main {
@@ -186,23 +185,25 @@ A:active {
   width: 32px;
   height: 32px;
   opacity: 0.3;
+  cursor: pointer;
 }
 .pop_up_close:hover {
   opacity: 1;
-  }
-  .pop_up_close:before, .pop_up_close:after {
+}
+.pop_up_close:before,
+.pop_up_close:after {
   position: absolute;
-  content: ' ';
+  content: " ";
   height: 33px;
   width: 2px;
   background-color: rgb(255, 255, 255);
-  }
-  .pop_up_close:before {
+}
+.pop_up_close:before {
   transform: rotate(45deg);
-  }
-  .pop_up_close:after {
+}
+.pop_up_close:after {
   transform: rotate(-45deg);
-  }
+}
 .header_title {
   font-weight: bold;
   -ms-flex-item-align: center;
@@ -210,11 +211,10 @@ A:active {
   align-self: center;
   font-size: 42px;
   margin: 25px;
-  color: white;
 }
 
 span {
-  opacity: 0;
+  color: gray;
   transition: all 0.8s ease;
   transform: translateY(50px);
   display: inline-block;
@@ -222,18 +222,18 @@ span {
 span.fade {
   opacity: 1;
   transform: translateY(0px);
-  animation: fly 7s ease-in-out infinite;
-  color: white;
+  animation: fly 3s ease-in-out infinite alternate;
 }
 @keyframes fly {
   0% {
-    color: rgba(217, 167, 233, 0.918);
+    color: blueviolet;
   }
   50% {
-    color: gold;
+    color: rgb(77, 122, 148);
   }
   100% {
-    color: rgba(217, 167, 233, 0.918);
+    color: rgb(77, 122, 148);
+
   }
 }
 .ul_wrapper {
@@ -310,11 +310,36 @@ span.fade {
   -ms-flex-item-align: center;
   align-self: center;
 }
+.swiper-container1 {
+  width: 100%;
+  height: 100%;
+color: black;
+}
+.swiper-slide1 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 /* slider */
 .slider {
   position: relative;
   overflow: hidden;
-  width: 700px;
+  height:100%;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
@@ -505,6 +530,9 @@ span.fade {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  -webkit-box-shadow: 15px 19px 58px 5px rgba(0,0,0,0.68);
+-moz-box-shadow: 15px 19px 58px 5px rgba(0,0,0,0.68);
+box-shadow: 15px 19px 58px 5px rgba(0,0,0,0.68);
 }
 
 .slider__wrapper2 {
@@ -676,7 +704,7 @@ span.fade {
 }
 .slider_wrapper {
   width: 100%;
-  height: 100%;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,7 +721,7 @@ span.fade {
 }
 .slider_wrapper1 {
   width: 100%;
-  height: 70%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -711,13 +739,19 @@ span.fade {
 
 .swiper-container {
   width: 100%;
-  height: 100%;
+  height: 70% !important;
+
 }
 
 .swiper-slide {
+  display: block;
+  width: 350px !important;
+  height: 450px !important;
   text-align: center;
+  align-self: center;
+  
   font-size: 18px;
-  background: red;
+  background: black;
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -732,7 +766,6 @@ span.fade {
   -webkit-align-items: center;
   align-items: center;
 }
-
 /* services */
 .services {
   position: absolute;
@@ -769,6 +802,9 @@ span.fade {
   width: 310px;
   height: 190px;
   position: relative;
+  -webkit-box-shadow: 0px 0px 86px 9px rgba(0,0,0,0.68);
+-moz-box-shadow: 0px 0px 86px 9px rgba(0,0,0,0.68);
+box-shadow: 0px 0px 86px 9px rgba(0,0,0,0.68);
 }
 .goods_img {
   transition: 1s ease-in;
@@ -945,9 +981,56 @@ span.fade {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
-
   flex-direction: column;
 }
+.questions_wrapper {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.questions_question {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px;
+}
+.question_item {
+  width: 100%;
+  font-size: 23px;
+  line-height: 26px;
+  background-color: rgba(0, 0, 0, 0.507);
+  margin: 20px 0px 20px 0px;
+  border-radius: 80px;
+  padding: 10px 20px 10px 45px;
+  color: white;
+  transform: translateX(-57px);
+  -webkit-box-shadow: 10px 10px 21px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 21px -3px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 21px -3px rgba(0,0,0,0.75);
+}
+.question_answers {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.question_answer {
+  width: 60%;
+  height: 60%;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.968);
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 23px;
+  line-height: 26px;
+  -webkit-box-shadow: 3px 15px 58px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 15px 58px 5px rgba(0,0,0,0.75);
+box-shadow: 3px 15px 58px 5px rgba(0,0,0,0.75);
+}
+
 /* contacts */
 .contacts {
   position: absolute;
@@ -1011,7 +1094,36 @@ span.fade {
   color: white;
   opacity: 1;
 }
+.jssorl-009-spin img {
+  animation-name: jssorl-009-spin;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
+@keyframes jssorl-009-spin {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+.jssorb132 {position:absolute;}
+.jssorb132 .i {position:absolute;cursor:pointer;}
+.jssorb132 .i .b {fill:#fff;fill-opacity:0.8;stroke:#000;stroke-width:1600;stroke-miterlimit:10;stroke-opacity:0.7;}
+.jssorb132 .i:hover .b {fill:#000;fill-opacity:.7;stroke:#fff;stroke-width:2000;stroke-opacity:0.8;}
+.jssorb132 .iav .b {fill:#000;stroke:#fff;stroke-width:2400;fill-opacity:0.8;stroke-opacity:1;}
+.jssorb132 .i.idn {opacity:0.3;}
+
+.jssora051 {display:block;position:absolute;cursor:pointer;}
+.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+.jssora051:hover {opacity:.8;}
+.jssora051.jssora051dn {opacity:.5;}
+.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
 @media screen and (max-height: 800px) and (max-width: 1280px) {
   .header_text {
     height: 93%;

@@ -38,6 +38,11 @@ if (clientWidth > 1100) {
       const tl2 = new TimelineMax({ delay: 0.4 });
       const tl3 = new TimelineMax({ delay: 0.3 });
       const tl4 = new TimelineMax({ delay: 0.4 });
+      // timer for FAQ
+        const tl5 = new TimelineMax({delay:0.5});
+        const tl6 = new TimelineMax({delay:0.6});
+        const tl7 = new TimelineMax({delay:0.7});
+        const tl8 = new TimelineMax({delay:0.8});
 
       //   scroll
       // down
@@ -394,6 +399,14 @@ if (clientWidth > 1100) {
       }
       if (destination.index === 6) {
         const slider2 = document.getElementsByClassName("slider2");
+        let question_item = document.getElementsByClassName('question_item')
+        let question_answer = document.getElementsByClassName('question_answer')[0]
+        tl5.fromTo(question_item[0], 1, {x: -1000}, {x: -57})
+        tl5.fromTo(question_answer, 0.7, {y: 600}, {y: 0})
+        tl6.fromTo(question_item[1], 1, {x: -1000}, {x: -57})
+        tl7.fromTo(question_item[2], 1, {x: -1000}, {x: -57})
+        tl8.fromTo(question_item[3], 1, {x: -1000}, {x: -57})
+        
         a_list[1].style.color = "rgb(190, 191, 195)";
         a_list[2].style.color = "rgb(190, 191, 195)";
         a_list[3].style.color = "rgb(190, 191, 195)";
