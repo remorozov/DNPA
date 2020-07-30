@@ -4,7 +4,6 @@ if (clientWidth > 1100) {
   window.onload = function () {
     history.pushState("", document.title, window.location.pathname);
     // к этому моменту страница загружена
-    const parallax = document.getElementById("parallax");
     parallax.style.top = 0;
     parallax.style.left = 0;
     parallax.onwheel = function () {
@@ -22,32 +21,33 @@ if (clientWidth > 1100) {
     anchors: ["a", "b", "c", "d", "e", "f", "g", "h"],
     onLeave: (origin, destination, direction) => {
       const section = destination.item;
-      const title = section.getElementsByClassName("product_title");
+      const title = section.getElementsByClassName("product_title")
       const advertising_text = section.getElementsByClassName(
         "advertising_text"
-      );
+      )
       const advertising_autor = section.getElementsByClassName(
         "advertising_autor"
       );
       const contacts_menu = document.getElementsByClassName('contacts_menu')[0]
-      
       const parallax = document.getElementById("parallax");
       const coords = parallax.getBoundingClientRect();
+      const header_ul_li = document.getElementsByClassName('header_ul_li')
       // timelines
       const tl = new TimelineMax({ delay: 0.5 });
       const tl2 = new TimelineMax({ delay: 0.4 });
       const tl3 = new TimelineMax({ delay: 0.3 });
       const tl4 = new TimelineMax({ delay: 0.4 });
       // timer for FAQ
-        const tl5 = new TimelineMax({delay:0.5});
-        const tl6 = new TimelineMax({delay:0.6});
-        const tl7 = new TimelineMax({delay:0.7});
-        const tl8 = new TimelineMax({delay:0.8});
-
+      const tl5 = new TimelineMax({delay:0.5});
+      const tl6 = new TimelineMax({delay:0.6});
+      const tl7 = new TimelineMax({delay:0.7});
+      const tl8 = new TimelineMax({delay:0.8});
+      const tl9 = new TimelineMax({delay:0.9});
+      const tl10 = new TimelineMax({delay:1});
+      const tl11 = new TimelineMax({delay:1.2});
       //   scroll
       // down
       if (destination.index == "0" && direction == "down") {
-        console.log(title);
 
         tl3.fromTo(
           parallax,
@@ -57,7 +57,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "1" && direction == "down") {
-        console.log(title);
         tl3.fromTo(
           parallax,
           1,
@@ -66,7 +65,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "2" && direction == "down") {
-        console.log(title);
 
         tl3.fromTo(
           parallax,
@@ -76,7 +74,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "3" && direction == "down") {
-        console.log(title);
         tl3.fromTo(
           parallax,
           1,
@@ -132,7 +129,6 @@ if (clientWidth > 1100) {
           { y: coords.top },
           { y: -(destination.index + 1) * 40 }
         );
-        console.log(-destination.index * 40);
       }
       if (destination.index == "1" && direction == "up") {
         tl3.fromTo(
@@ -141,10 +137,8 @@ if (clientWidth > 1100) {
           { y: coords.top },
           { y: -(destination.index + 1) * 40 }
         );
-        console.log(-destination.index * 40);
       }
       if (destination.index == "2" && direction == "up") {
-        console.log(destination.index);
 
         tl3.fromTo(
           parallax,
@@ -152,10 +146,8 @@ if (clientWidth > 1100) {
           { y: coords.top },
           { y: -(destination.index + 1) * 40 }
         );
-        console.log(-destination.index * 40);
       }
       if (destination.index == "3" && direction == "up") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -164,7 +156,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "4" && direction == "up") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -173,7 +164,6 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "5" && direction == "up") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
@@ -182,35 +172,32 @@ if (clientWidth > 1100) {
         );
       }
       if (destination.index == "6" && direction == "up") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
           { y: coords.top },
           { y: -(destination.index + 1) * 40 }
-        );
-      }
-      if (destination.index == "7" && direction == "up") {
-        console.log(destination.index);
+          );
+        }
+        if (destination.index == "7" && direction == "up") {
         tl3.fromTo(
           parallax,
           1,
           { y: coords.top },
           { y: -(destination.index + 1) * 40 }
-        );
+          );
       }
       if (destination.index == "8" && direction == "up") {
-        console.log(destination.index);
         tl3.fromTo(
           parallax,
           1,
           { y: coords.top },
           { y: -(destination.index + 1) * 40 }
-        );
-      }
-
-      // animation for all pages
-
+          );
+        }
+        
+        // animation for all pages
+        
       if (destination.index === 0) {
         a_list[1].style.color = "rgb(190, 191, 195)";
         a_list[2].style.color = "rgb(190, 191, 195)";
@@ -224,8 +211,10 @@ if (clientWidth > 1100) {
             a_list[n].className = "header_button";
           }
         }
-        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
-
+        tl.fromTo(contacts_menu, 0.5,{height: contacts_menu.style.height,width: contacts_menu.style.width},{height: 250,width:90})
+        for (let a of header_ul_li){
+          tl3.fromTo(a, 0.5, {opacity:0,y:150,scale:1.2},{opacity:1,y:0,scale:1})
+        }
       }
       if (destination.index === 1) {
         const slider = document.getElementsByClassName("slider");
@@ -246,21 +235,21 @@ if (clientWidth > 1100) {
           0.7,
           { scale: 1.4, opacity: 0, x: 500, y: 200 },
           { scale: 1, opacity: 1, x: 0, y: 0 }
-        );
+          );
         tl.fromTo(
           advertising_text,
           0.4,
           { y: "300", opacity: 0 },
           { y: "0", opacity: 1 }
-        );
+          );
         tl.fromTo(
           advertising_autor,
           0.3,
           { x: "300", opacity: 0 },
           { x: "0", opacity: 1 }
-        );
-        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
-
+          );
+          tl.fromTo(contacts_menu, 0.5,{height: contacts_menu.style.height,width: contacts_menu.style.width},{height: 250,width:90})
+        
       }
       if (destination.index === 2) {
         const slider1 = document.getElementsByClassName("slider1");
@@ -288,14 +277,14 @@ if (clientWidth > 1100) {
           0.5,
           { y: "300", opacity: 0 },
           { y: "0", opacity: 1 }
-        );
+          );
         tl.fromTo(
           advertising_autor,
           0.5,
           { x: "300", opacity: 0 },
           { x: "0", opacity: 1 }
         );
-        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+        tl.fromTo(contacts_menu, 0.5,{height: contacts_menu.style.height,width: contacts_menu.style.width},{height: 250,width:90})
 
       }
       if (destination.index === 3) {
@@ -334,7 +323,7 @@ if (clientWidth > 1100) {
           { x: "-300", opacity: 0 },
           { x: "0", opacity: 1 }
         );
-        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+        tl.fromTo(contacts_menu, 0.5,{height: contacts_menu.style.height,width: contacts_menu.style.width},{height: 250,width:90})
 
       }
       if (destination.index === 4) {
@@ -373,7 +362,7 @@ if (clientWidth > 1100) {
           { x: "300", opacity: 0 },
           { x: "0", opacity: 1 }
         );
-        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+        tl.fromTo(contacts_menu, 0.5,{height: contacts_menu.style.height,width: contacts_menu.style.width},{height: 250,width:90})
 
       }
       if (destination.index === 5) {
@@ -394,27 +383,28 @@ if (clientWidth > 1100) {
             a_list[n].className = "header_button";
           }
         }
-        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+        tl.fromTo(contacts_menu, 0.5,{height: contacts_menu.style.height,width: contacts_menu.style.width},{height: 250,width:90})
 
       }
       if (destination.index === 6) {
-        const slider2 = document.getElementsByClassName("slider2");
+        const slider2 = document.getElementsByClassName("slider2")
         let question_item = document.getElementsByClassName('question_item')
-        let question_answer = document.getElementsByClassName('question_answer')[0]
-        tl5.fromTo(question_item[0], 1, {x: -1000}, {x: -57})
-        tl5.fromTo(question_answer, 0.7, {y: 600}, {y: 0})
-        tl6.fromTo(question_item[1], 1, {x: -1000}, {x: -57})
-        tl7.fromTo(question_item[2], 1, {x: -1000}, {x: -57})
-        tl8.fromTo(question_item[3], 1, {x: -1000}, {x: -57})
+        tl5.fromTo(question_item[0],0.5,{x:-650},{x:-40})
+        tl6.fromTo(question_item[1],0.5,{x:-650},{x:-40})
+        tl7.fromTo(question_item[2],0.5,{x:-650},{x:-40})
+        tl8.fromTo(question_item[3],0.5,{x:-650},{x:-40})
+        tl9.fromTo(question_item[4],0.5,{x:-650},{x:-40})
+        tl10.fromTo(question_item[5],0.5,{x:-650},{x:-40})
         
-        a_list[1].style.color = "rgb(190, 191, 195)";
-        a_list[2].style.color = "rgb(190, 191, 195)";
-        a_list[3].style.color = "rgb(190, 191, 195)";
-        a_list[4].style.color = "rgb(190, 191, 195)";
-        a_list[5].style.color = "white";
-        a_list[5].className += "_active";
-        a_list[6].style.color = "rgb(190, 191, 195)";
-        a_list[7].style.color = "rgb(190, 191, 195)";
+        
+        a_list[1].style.color = "rgb(190, 191, 195)"
+        a_list[2].style.color = "rgb(190, 191, 195)"
+        a_list[3].style.color = "rgb(190, 191, 195)"
+        a_list[4].style.color = "rgb(190, 191, 195)"
+        a_list[5].style.color = "white"
+        a_list[5].className += "_active"
+        a_list[6].style.color = "rgb(190, 191, 195)"
+        a_list[7].style.color = "rgb(190, 191, 195)"
         for (let n = 1; n <= 7; n++) {
           if (n == 5) {
             n++;
@@ -423,7 +413,7 @@ if (clientWidth > 1100) {
             a_list[n].className = "header_button";
           }
         }
-        tl.fromTo(contacts_menu, 0.5,{marginRight:contacts_menu.style.marginRight ,marginBottom: contacts_menu.style.marginBottom,height: contacts_menu.style.height},{marginRight:'0%',marginBottom: '0%',height: 250})
+        tl.fromTo(contacts_menu, 0.5,{height: contacts_menu.style.height,width: contacts_menu.style.width},{height: 250,width:90})
       }
       if (destination.index === 7) {
         const slider2 = document.getElementsByClassName("slider2");
@@ -443,7 +433,7 @@ if (clientWidth > 1100) {
             a_list[n].className = "header_button";
           }
         }
-        tl4.fromTo(contacts_menu, 1, {x:0},{marginRight:'25%',marginBottom: '8%',height: 400})
+        tl4.fromTo(contacts_menu, 1, {x:0},{width:'50%',height: '80%',})
       }
       a_list[1].addEventListener("click", function () {
         parallax.style.position.top == "-500px";
