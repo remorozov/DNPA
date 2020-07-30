@@ -395,6 +395,7 @@ if (clientWidth > 1100) {
         tl8.fromTo(question_item[3],0.5,{x:-650},{x:-40})
         tl9.fromTo(question_item[4],0.5,{x:-650},{x:-40})
         tl10.fromTo(question_item[5],0.5,{x:-650},{x:-40})
+        tl11.fromTo(question_item[6],0.5,{x:-650},{x:-40})
         
         
         a_list[1].style.color = "rgb(190, 191, 195)"

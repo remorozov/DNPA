@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+</head>
+<body>
+  <div class="owl-carousel">
+    <div>Слайд 1</div>
+    <div>Слайд 2</div>
+    <div>Слайд 3</div>
+    <div>Слайд 4</div>
+    <div>Слайд 5</div>
+    <div>Слайд 6</div>
+    <div>Слайд 7</div>
+    <div>Слайд 8</div>
+    <div>Слайд 9</div>
+    <div>Слайд 10</div>
+  </div>
+  <script>
+    $(function () {
+      $(".owl-carousel").owlCarousel();
+    });
+  </script>
+  <script src="slider/owlcarousel/owl.carousel.min.js"></script>
+  <script src="script/jquery-3.5.1.min.js"></script>
 
-  <body>
-    <div id="scene">
-      <div data-depth="0.2" style="width: 100%; height: 100%;">My first Layer!</div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script>
-      var scene = document.getElementById("scene");
-      var parallaxInstance = new Parallax(scene, {
-        relativeInput: true,
-      });
-    </script>
-  </body>
+</body>
 </html>
