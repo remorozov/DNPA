@@ -583,48 +583,26 @@
                 <div class="product_title" style="color: black;">
                     Мы сделаем для вас
                 </div>
-                <div class="product_responsive">
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
-                    <div class="product_item"></div>
+                <div class="produt_wrapper">
+                    <div class="product_shelf">
+                        <div class="product_filter"></div>
+                        <div class="product_row1">
+                            <div class="product_row_item"> </div>
+                            <div class="product_row_item"> </div>
+                            <div class="product_row_item"> </div>
+                        </div>
+                        <div class="product_row2">
+                            <div class="product_row_item"> </div>
+                            <div class="product_row_item"> </div>
+                            <div class="product_row_item"> </div>
+                        </div>
+                        <div class="product_row3">
+                            <div class="product_row_item"> </div>
+                            <div class="product_row_item"> </div>
+                            <div class="product_row_item"> </div>
+                        </div>
+                    </div>
                 </div>
-                <script>
-                    $('.product_responsive').slick({
-                        accessibility: true,
-                        infinite: false,
-                        speed: 300,
-                        slidesToShow: 4,
-                        slidesToScroll: 4,
-                        responsive: [{
-                            breakpoint: 1050,
-                            settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 3,
-                            }
-                        }, {
-                            breakpoint: 830,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 2
-                            }
-                        }, {
-                            breakpoint: 560,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
-                        }]
-                    });
-                </script>
             </div>
         </div>
         <div class="section">
@@ -1110,7 +1088,7 @@
         });
     </script>
     <script>
-      document.querySelector('.questions_question').onwheel = e => e.stopPropagation();
+        document.querySelector('.questions_question').onwheel = e => e.stopPropagation();
     </script>
 </body>
 

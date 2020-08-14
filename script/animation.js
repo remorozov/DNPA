@@ -49,3 +49,22 @@ for (let a = 0; a < question_item.length; a++) {
 }
 
 // scroll off FAQ
+
+
+
+
+// filter for product
+let product_filter = document.getElementsByClassName('product_filter')[0]
+let product_row_item = document.getElementsByClassName('product_row_item')
+for (let a of product_row_item){
+    a.addEventListener('mouseover',function(){
+        a.style.zIndex = '4'
+        product_filter.style.zIndex = '3'
+        product_filter.style.opacity = '0.5'
+    })
+    a.addEventListener('mouseout',function(){
+        a.style.zIndex = '2'
+        product_filter.style.zIndex = '1'
+        product_filter.style.opacity = '0'
+    })
+}
